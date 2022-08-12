@@ -7,7 +7,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Islamy App'),
+        title: Text(
+          'Islamy App',
+          style: TextStyle(fontSize: 30),
+        ),
       ),
     );
   }
