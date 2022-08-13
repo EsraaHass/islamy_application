@@ -70,6 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Quran(),
     Radios(),
     Tasbeha(),
-    Hadeth(),
+    HadethTab(),
   ];
 }

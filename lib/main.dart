@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamy_app/home/hadeth/hadeth_details.dart';
 import 'package:islamy_app/home/homeScreen.dart';
 import 'package:islamy_app/home/my_theme.dart';
 import 'package:islamy_app/home/quran/sura_details.dart';
@@ -11,6 +12,7 @@ void main() {
     routes: {
       HomeScreen.routeName: (_) => HomeScreen(),
       SuraDetailes.routeName: (_) => SuraDetailes(),
+      HadethDetailsScreen.routeName: (_) => HadethDetailsScreen()
     },
   ));
 }

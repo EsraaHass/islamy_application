@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:islamy_app/home/hadeth/dataClassHadeth.dart';
+import 'package:islamy_app/home/hadeth/Hadeth.dart';
 import 'package:islamy_app/home/hadeth/hadeth_details.dart';
 
-class HadethName extends StatelessWidget {
-  String text;
-  int index;
+class HadethTitleWidget extends StatelessWidget {
+  Hadeth hadeth;
 
-  HadethName(this.text, this.index);
+  HadethTitleWidget(this.hadeth);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, HadethDetails.routeName,
-            arguments: ContentHadethData(text, index));
+        Navigator.pushNamed(context, HadethDetailsScreen.routeName,
+            arguments: hadeth);
       },
       child: Container(
-          padding: EdgeInsets.symmetric(vertical: 6),
-          alignment: Alignment.center,
-          child: Text(
-            '$text',
-            style: Theme.of(context).textTheme.headline5,
-          )),
+        alignment: Alignment.center,
+        padding: const EdgeInsets.symmetric(vertical: 8),
+        child: Text(
+          hadeth.title,
+          style: Theme.of(context).textTheme.headline5,
+        ),
+      ),
     );
   }
 }
