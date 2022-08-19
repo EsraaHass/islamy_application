@@ -5,7 +5,7 @@ class Tasbeha extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.deepPurple,
+      color: Colors.transparent,
     );
   }
 }
