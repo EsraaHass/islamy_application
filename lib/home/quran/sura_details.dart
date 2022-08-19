@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamy_app/home/commonWidget/seperated_widget.dart';
+import 'package:islamy_app/home/providers/settingsProvider.dart';
 import 'package:islamy_app/home/quran/dataClassSura.dart';
 import 'package:islamy_app/home/quran/sura_content.dart';
+import 'package:provider/provider.dart';
 
 class SuraDetailes extends StatefulWidget {
   static const String routeName = 'SuraDetailes';
@@ -18,10 +20,12 @@ class _SuraDetailesState extends State<SuraDetailes> {
   Widget build(BuildContext context) {
     var args = ModalRoute.of(context)?.settings.arguments as DataClassSura;
     if (ayatQuran.isEmpty) readFile(args.index);
+    var settingProvders = Provider.of<SettingProviders>(context);
+
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
           image: DecorationImage(
-        image: AssetImage('assets/images/background_image.png'),
+        image: AssetImage(settingProvders.getMainBackGroundColor()),
         fit: BoxFit.fill,
       )),
       child: Scaffold(
@@ -34,7 +38,7 @@ class _SuraDetailesState extends State<SuraDetailes> {
             : Container(
                 margin: EdgeInsets.symmetric(horizontal: 10, vertical: 60),
                 decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Theme.of(context).backgroundColor,
                     borderRadius: BorderRadius.circular(30)),
                 child: ListView.separated(
                   itemBuilder: (_, index) {
