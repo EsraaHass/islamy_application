@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamy_app/home/hadeth/Hadeth.dart';
 import 'package:islamy_app/home/providers/settingsProvider.dart';
 import 'package:islamy_app/home/quran/Quran.dart';
 import 'package:islamy_app/home/radio/Radio.dart';
 import 'package:islamy_app/home/settings/Settings.dart';
 import 'package:islamy_app/home/tasbeha/Tasbeha.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -53,9 +53,9 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor:
                   Theme.of(context).bottomNavigationBarTheme.backgroundColor,
               icon: ImageIcon(
-                AssetImage('assets/images/icon_radio.png'),
+                AssetImage('assets/images/icon_hadeth.png'),
               ),
-              label: AppLocalizations.of(context)!.radio_title,
+              label: AppLocalizations.of(context)!.hadeth_title,
             ),
             BottomNavigationBarItem(
               backgroundColor:
@@ -69,9 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
               backgroundColor:
                   Theme.of(context).bottomNavigationBarTheme.backgroundColor,
               icon: ImageIcon(
-                AssetImage('assets/images/icon_hadeth.png'),
+                AssetImage('assets/images/icon_radio.png'),
               ),
-              label: AppLocalizations.of(context)!.hadeth_title,
+              label: AppLocalizations.of(context)!.radio_title,
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.settings),
@@ -88,9 +88,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> tabsPages = [
     Quran(),
-    Radios(),
-    Tasbeha(),
     HadethTab(),
+    Tasbeha(),
+    Radios(),
     Settings(),
   ];
 }
