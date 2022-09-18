@@ -3,7 +3,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamy_app/home/hadeth/Hadeth.dart';
 import 'package:islamy_app/home/providers/settingsProvider.dart';
 import 'package:islamy_app/home/quran/Quran.dart';
-import 'package:islamy_app/home/radio/Radio.dart';
+import 'package:islamy_app/home/radios/radios_tab.dart';
 import 'package:islamy_app/home/settings/Settings.dart';
 import 'package:islamy_app/home/tasbeha/Tasbeha.dart';
 import 'package:provider/provider.dart';
@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
     Quran(),
     HadethTab(),
     Tasbeha(),
-    Radios(),
+    RadiosTab(),
     Settings(),
   ];
 }
